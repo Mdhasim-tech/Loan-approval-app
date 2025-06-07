@@ -3,7 +3,8 @@ from flask_cors import CORS
 from predict import pred_bp  # ✅ Assuming your blueprint is in predict.py
 
 app = Flask(__name__)
-CORS(app)  # This will enable CORS for all routes by default
+CORS(app, origins=["https://loan-approval-app-frontend.onrender.com"])
+
 @app.route('/')
 def home():
     return "Hello, world!"
